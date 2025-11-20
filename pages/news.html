@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости — Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/styles.css">
+    <meta name="description" content="Новости и обновления портфолио: релизы, статьи, выступления.">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <header class="sticky-top border-bottom bg-body">
+            <nav class="navbar navbar-expand-lg navbar-light bg-body">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="news.html">Новости</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="practices.html">Практики</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="goods.html">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Переключить тему" id="themeToggle">
+                            <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow-1">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="h2 fw-light text-uppercase mb-4">Новости <span class="fs-4">↘</span></h1>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#newsModal" data-news-id="1">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Вышла статья про оптимизацию React</h5>
+                                    <p class="text-muted small mb-3">Октябрь 2025</p>
+                                    <p class="card-text">Разбираю приёмы мемоизации, профилирование, а также Server Components.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#newsModal" data-news-id="2">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Открыл исходники pet‑проекта</h5>
+                                    <p class="text-muted small mb-3">Сентябрь 2025</p>
+                                    <p class="card-text">Публикую репозиторий с монорепой Turborepo: веб‑клиент, API и worker.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#newsModal" data-news-id="3">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold">Выступление на митапе</h5>
+                                    <p class="text-muted small mb-3">Август 2025</p>
+                                    <p class="card-text">Доклад про практики тестирования: Contract tests, Vitest и Playwright.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newsModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted small mb-3" id="newsModalDate"></p>
+                        <div id="newsModalBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border-top bg-body mt-auto py-3">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                    <div class="d-flex gap-3">
+                        <a class="text-decoration-none" href="https://github.com/kkapanny" aria-label="GitHub">GitHub</a>
+                        <a class="text-decoration-none" href="https://t.me/kkapanny" aria-label="Telegram">Telegram</a>
+                        <a class="text-decoration-none" href="contacts.html">Связаться</a>
+                    </div>
+                    <div class="text-muted small">© Капустинская Анна, 2024–2025</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../script/theme-toggle.js"></script>
+    <script>
+        const newsData = {
+            1: {
+                title: "Вышла статья про оптимизацию React",
+                date: "Октябрь 2025",
+                content: `
+                    <p>В своей новой статье я подробно разбираю современные приёмы оптимизации React-приложений. Рассматриваю различные техники мемоизации компонентов и вычислений, которые помогают избежать лишних ререндеров.</p>
+                    <p>Особое внимание уделяю профилированию производительности с помощью React DevTools Profiler и Chrome DevTools. Показываю, как находить узкие места в приложении и эффективно их устранять.</p>
+                    <p>Также рассказываю о Server Components и их влиянии на производительность. Объясняю, когда стоит использовать серверные компоненты, а когда лучше остаться на клиентской стороне.</p>
+                    <p>Статья включает практические примеры кода и реальные кейсы из моих проектов. Все примеры протестированы и готовы к использованию в продакшене.</p>
+                `
+            },
+            2: {
+                title: "Открыл исходники pet‑проекта",
+                date: "Сентябрь 2025",
+                content: `
+                    <p>Рад объявить о публикации исходного кода моего pet-проекта на GitHub. Это полнофункциональное приложение, построенное с использованием современного стека технологий.</p>
+                    <p>Проект использует монорепозиторий на базе Turborepo, что позволяет эффективно управлять несколькими пакетами и приложениями в одном репозитории. Структура включает веб-клиент на React, REST API на Node.js и фоновые воркеры для обработки задач.</p>
+                    <p>В репозитории вы найдёте:</p>
+                    <ul>
+                        <li>Полную документацию по архитектуре</li>
+                        <li>Инструкции по запуску и развёртыванию</li>
+                        <li>Примеры использования API</li>
+                        <li>Тесты для всех компонентов</li>
+                    </ul>
+                    <p>Проект демонстрирует лучшие практики разработки: модульную архитектуру, типизацию TypeScript, автоматизированное тестирование и CI/CD пайплайны.</p>
+                `
+            },
+            3: {
+                title: "Выступление на митапе",
+                date: "Август 2025",
+                content: `
+                    <p>Выступил на локальном митапе с докладом о современных практиках тестирования в JavaScript-экосистеме. Доклад вызвал живой интерес у аудитории.</p>
+                    <p>Основные темы, которые я затронул:</p>
+                    <ul>
+                        <li><strong>Contract Testing</strong> — как обеспечить совместимость между микросервисами и избежать поломок при изменениях API</li>
+                        <li><strong>Vitest</strong> — современная альтернатива Jest с поддержкой ESM и отличной производительностью</li>
+                        <li><strong>Playwright</strong> — мощный инструмент для end-to-end тестирования с поддержкой нескольких браузеров</li>
+                    </ul>
+                    <p>Поделился практическим опытом внедрения этих инструментов в реальных проектах. Показал, как правильно структурировать тесты, чтобы они были поддерживаемыми и надёжными.</p>
+                    <p>После доклада провёл Q&A сессию, где ответил на вопросы участников о специфике тестирования в различных сценариях. Материалы доклада доступны в моём GitHub репозитории.</p>
+                `
+            }
+        };
+
+        const newsModal = document.getElementById('newsModal');
+        if (newsModal) {
+            newsModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const newsId = parseInt(button.getAttribute('data-news-id'));
+                const news = newsData[newsId];
+                
+                if (news) {
+                    const modalTitle = newsModal.querySelector('.modal-title');
+                    const modalDate = newsModal.querySelector('#newsModalDate');
+                    const modalBody = newsModal.querySelector('#newsModalBody');
+                    
+                    modalTitle.textContent = news.title;
+                    modalDate.textContent = news.date;
+                    modalBody.innerHTML = news.content;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

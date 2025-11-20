@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики — Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/styles.css">
+    <meta name="description" content="Портфолио работ: веб‑приложения, библиотеки, эксперименты.">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <header class="sticky-top border-bottom bg-body">
+            <nav class="navbar navbar-expand-lg navbar-light bg-body">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.html">Новости</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="practices.html">Практики</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="goods.html">Услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-outline-secondary theme-toggle" type="button" aria-label="Переключить тему" id="themeToggle">
+                            <svg class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow-1">
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="h2 fw-light text-uppercase mb-4">Мои работы <span class="fs-4">↘</span></h1>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="1">
+                                <img src="../dashboard_analitic.png" class="card-img-top" alt="Dashboard аналитики" style="aspect-ratio: 16/10; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dashboard аналитики</h5>
+                                    <p class="text-muted small mb-0">Next.js, Tailwind, Chart.js</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="2">
+                                <img src="../rest:graphql.jpg" class="card-img-top" alt="REST/GraphQL API" style="aspect-ratio: 16/10; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">REST/GraphQL API</h5>
+                                    <p class="text-muted small mb-0">Node.js, Fastify, GraphQL Yoga</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="3">
+                                <img src="../servis_ocheredei.jpg" class="card-img-top" alt="Сервис очередей" style="aspect-ratio: 16/10; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Сервис очередей</h5>
+                                    <p class="text-muted small mb-0">BullMQ, Redis, TypeScript</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="4">
+                                <div class="card-img-top bg-secondary" style="aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center;">
+                                    <span class="text-muted">Изображение отсутствует</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">UI библиотека компонентов</h5>
+                                    <p class="text-muted small mb-0">React, Storybook</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="5">
+                                <img src="../websocket.jpg" class="card-img-top" alt="Веб‑чат с WebSocket" style="aspect-ratio: 16/10; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Веб‑чат с WebSocket</h5>
+                                    <p class="text-muted small mb-0">Node.js, WS, Postgres</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#practiceModal" data-practice-id="6">
+                                <img src="../mobile_pwa.png" class="card-img-top" alt="Мобильная PWA" style="aspect-ratio: 16/10; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Мобильная PWA</h5>
+                                    <p class="text-muted small mb-0">React, Service Worker</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="modal fade" id="practiceModal" tabindex="-1" aria-labelledby="practiceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="practiceModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted small mb-3" id="practiceModalStack"></p>
+                        <div id="practiceModalBody"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border-top bg-body mt-auto py-3">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                    <div class="d-flex gap-3">
+                        <a class="text-decoration-none" href="https://github.com/kkapanny" aria-label="GitHub">GitHub</a>
+                        <a class="text-decoration-none" href="https://t.me/kkapanny" aria-label="Telegram">Telegram</a>
+                        <a class="text-decoration-none" href="contacts.html">Связаться</a>
+                    </div>
+                    <div class="text-muted small">© Капустинская Анна, 2024–2025</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../script/theme-toggle.js"></script>
+    <script>
+        const practiceData = {
+            1: {
+                title: "Dashboard аналитики",
+                stack: "Next.js, Tailwind, Chart.js",
+                image: "../dashboard_analitic.png",
+                content: `
+                    <img src="../dashboard_analitic.png" alt="Dashboard аналитики" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Современный дашборд для визуализации аналитических данных с интерактивными графиками и таблицами. Проект разработан с использованием Next.js для серверного рендеринга и оптимизации производительности.</p>
+                    <p>Основные возможности включают фильтрацию данных в реальном времени, экспорт отчетов в различных форматах, настраиваемые виджеты и адаптивный дизайн для всех устройств.</p>
+                    <p>Использованы современные библиотеки визуализации Chart.js для создания интерактивных графиков. Tailwind CSS обеспечивает быструю разработку и консистентный дизайн.</p>
+                    <p>Проект включает систему аутентификации, ролевую модель доступа и интеграцию с различными источниками данных через REST API.</p>
+                `
+            },
+            2: {
+                title: "REST/GraphQL API",
+                stack: "Node.js, Fastify, GraphQL Yoga",
+                image: "../rest:graphql.jpg",
+                content: `
+                    <img src="../rest:graphql.jpg" alt="REST/GraphQL API" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Гибридное API решение, поддерживающее как REST, так и GraphQL протоколы. Разработано на базе Node.js с использованием Fastify для высокой производительности.</p>
+                    <p>GraphQL Yoga обеспечивает гибкость запросов и оптимизацию передачи данных. Реализована система кэширования, rate limiting и валидация запросов.</p>
+                    <p>API включает полную документацию через Swagger для REST endpoints и GraphQL Playground для интерактивного тестирования GraphQL запросов.</p>
+                    <p>Реализована система мониторинга, логирования и обработки ошибок. Проект масштабируется горизонтально и поддерживает микросервисную архитектуру.</p>
+                `
+            },
+            3: {
+                title: "Сервис очередей",
+                stack: "BullMQ, Redis, TypeScript",
+                image: "../servis_ocheredei.jpg",
+                content: `
+                    <img src="../servis_ocheredei.jpg" alt="Сервис очередей" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Надежный сервис для управления фоновыми задачами и очередями на базе BullMQ и Redis. Обеспечивает отложенное выполнение задач, приоритизацию и обработку ошибок.</p>
+                    <p>Реализованы различные типы очередей: приоритетные, отложенные, повторяющиеся задачи. Система автоматически обрабатывает сбои и повторяет неудачные задачи.</p>
+                    <p>TypeScript обеспечивает типобезопасность и улучшает developer experience. Реализован мониторинг очередей через веб-интерфейс.</p>
+                    <p>Сервис интегрирован с основным приложением через события и поддерживает горизонтальное масштабирование для обработки больших объемов задач.</p>
+                `
+            },
+            4: {
+                title: "UI библиотека компонентов",
+                stack: "React, Storybook",
+                image: "../work1.jpg",
+                content: `
+                    <img src="../work1.jpg" alt="UI библиотека компонентов" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Переиспользуемая библиотека UI компонентов, разработанная с использованием React и документированная в Storybook. Библиотека включает более 50 готовых компонентов.</p>
+                    <p>Все компоненты полностью типизированы с TypeScript, поддерживают темизацию и доступность (a11y). Реализована система дизайн-токенов для консистентности.</p>
+                    <p>Storybook обеспечивает изолированную разработку компонентов, автоматическое тестирование и документацию с примерами использования.</p>
+                    <p>Библиотека опубликована в npm и используется в нескольких проектах. Регулярно обновляется с учетом обратной связи и новых требований.</p>
+                `
+            },
+            5: {
+                title: "Веб‑чат с WebSocket",
+                stack: "Node.js, WS, Postgres",
+                image: "../websocket.jpg",
+                content: `
+                    <img src="../websocket.jpg" alt="Веб‑чат с WebSocket" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Реал-тайм веб-приложение для обмена сообщениями с использованием WebSocket соединений. Обеспечивает мгновенную доставку сообщений без обновления страницы.</p>
+                    <p>Реализованы функции групповых чатов, приватных сообщений, уведомлений и статусов пользователей. Сообщения сохраняются в PostgreSQL для истории переписки.</p>
+                    <p>Система поддерживает файловые вложения, эмодзи, форматирование текста и поиск по истории сообщений. Реализована модерация контента.</p>
+                    <p>Приложение оптимизировано для работы с большим количеством одновременных соединений. Используется горизонтальное масштабирование через Redis для синхронизации между серверами.</p>
+                `
+            },
+            6: {
+                title: "Мобильная PWA",
+                stack: "React, Service Worker",
+                image: "../mobile_pwa.png",
+                content: `
+                    <img src="../mobile_pwa.png" alt="Мобильная PWA" class="img-fluid rounded float-start me-3 mb-3" style="max-width: 200px;">
+                    <p>Прогрессивное веб-приложение (PWA) с полной поддержкой офлайн режима. Разработано на React с использованием Service Worker для кэширования ресурсов.</p>
+                    <p>Приложение работает как нативное мобильное приложение: устанавливается на домашний экран, работает офлайн, отправляет push-уведомления.</p>
+                    <p>Реализована стратегия кэширования "Cache First" для статических ресурсов и "Network First" для динамического контента. Обеспечивается синхронизация данных при восстановлении соединения.</p>
+                    <p>PWA оптимизировано для производительности: быстрая загрузка, плавная анимация, минимальное потребление батареи. Протестировано на различных мобильных устройствах.</p>
+                `
+            }
+        };
+
+        const practiceModal = document.getElementById('practiceModal');
+        if (practiceModal) {
+            practiceModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const practiceId = parseInt(button.getAttribute('data-practice-id'));
+                const practice = practiceData[practiceId];
+                
+                if (practice) {
+                    const modalTitle = practiceModal.querySelector('.modal-title');
+                    const modalStack = practiceModal.querySelector('#practiceModalStack');
+                    const modalBody = practiceModal.querySelector('#practiceModalBody');
+                    
+                    modalTitle.textContent = practice.title;
+                    modalStack.textContent = practice.stack;
+                    modalBody.innerHTML = practice.content;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
